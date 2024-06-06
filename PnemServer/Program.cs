@@ -27,7 +27,10 @@ namespace AmsOpcUaServer
             Console.WriteLine("Server started");
             Console.WriteLine("Server available at endpoint: "  + app.Server.GetEndpoints()[0].EndpointUrl);
             Console.WriteLine("\nPress any key to stop");
-            Console.ReadKey();
+            while (true)
+            {
+
+            }
             Console.WriteLine();
             Console.WriteLine("Stopping server");
             app.Stop();
