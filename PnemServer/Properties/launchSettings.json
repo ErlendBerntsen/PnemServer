@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "PnemServer": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}

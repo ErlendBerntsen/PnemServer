@@ -1,0 +1,178 @@
+<xs:schema
+  xmlns:Opc.Ua.DI="http://opcfoundation.org/UA/DI/"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:ua="http://opcfoundation.org/UA/2008/02/Types.xsd"
+  xmlns:tns="http://opcfoundation.org/UA/PNEM/"
+  targetNamespace="http://opcfoundation.org/UA/PNEM/"
+  elementFormDefault="qualified"
+>
+  <xs:annotation>
+    <xs:appinfo>
+      <ua:Model ModelUri="http://opcfoundation.org/UA/PNEM/" Version="1.0.0" PublicationDate="2021-03-11T00:00:00Z" />
+    </xs:appinfo>
+  </xs:annotation>
+  
+  <xs:import namespace="http://opcfoundation.org/UA/" />
+  <xs:import namespace="http://opcfoundation.org/UA/DI/" />
+
+  <xs:simpleType  name="AccuracyClassEnumeration">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ACCURACY_CLASS_0_0" />
+      <xs:enumeration value="ACCURACY_CLASS_1_1" />
+      <xs:enumeration value="ACCURACY_CLASS_2_2" />
+      <xs:enumeration value="ACCURACY_CLASS_3_3" />
+      <xs:enumeration value="ACCURACY_CLASS_4_4" />
+      <xs:enumeration value="ACCURACY_CLASS_5_5" />
+      <xs:enumeration value="ACCURACY_CLASS_6_6" />
+      <xs:enumeration value="ACCURACY_CLASS_7_7" />
+      <xs:enumeration value="ACCURACY_CLASS_8_8" />
+      <xs:enumeration value="ACCURACY_CLASS_9_9" />
+      <xs:enumeration value="ACCURACY_CLASS_10_10" />
+      <xs:enumeration value="ACCURACY_CLASS_11_11" />
+      <xs:enumeration value="ACCURACY_CLASS_12_12" />
+      <xs:enumeration value="ACCURACY_CLASS_13_13" />
+      <xs:enumeration value="ACCURACY_CLASS_14_14" />
+      <xs:enumeration value="ACCURACY_CLASS_15_15" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AccuracyClassEnumeration" type="tns:AccuracyClassEnumeration" />
+
+  <xs:complexType name="ListOfAccuracyClassEnumeration">
+    <xs:sequence>
+      <xs:element name="AccuracyClassEnumeration" type="tns:AccuracyClassEnumeration" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListOfAccuracyClassEnumeration" type="tns:ListOfAccuracyClassEnumeration" nillable="true"></xs:element>
+
+  <xs:simpleType  name="AccuracyDomainEnumeration">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ACCURACY_DOMAIN_RESERVED_0" />
+      <xs:enumeration value="ACCURACY_DOMAIN_PERCENT_FULL_SCALE_1" />
+      <xs:enumeration value="ACCURACY_DOMAIN_PERCENT_ACTUAL_READING_2" />
+      <xs:enumeration value="ACCURACY_DOMAIN_IEC_3" />
+      <xs:enumeration value="ACCURACY_DOMAIN_EN_4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AccuracyDomainEnumeration" type="tns:AccuracyDomainEnumeration" />
+
+  <xs:complexType name="ListOfAccuracyDomainEnumeration">
+    <xs:sequence>
+      <xs:element name="AccuracyDomainEnumeration" type="tns:AccuracyDomainEnumeration" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListOfAccuracyDomainEnumeration" type="tns:ListOfAccuracyDomainEnumeration" nillable="true"></xs:element>
+
+  <xs:simpleType  name="PeClassEnumeration">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PE_CLASS1_0" />
+      <xs:enumeration value="PE_CLASS2_1" />
+      <xs:enumeration value="PE_CLASS3_2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PeClassEnumeration" type="tns:PeClassEnumeration" />
+
+  <xs:complexType name="ListOfPeClassEnumeration">
+    <xs:sequence>
+      <xs:element name="PeClassEnumeration" type="tns:PeClassEnumeration" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListOfPeClassEnumeration" type="tns:ListOfPeClassEnumeration" nillable="true"></xs:element>
+
+  <xs:simpleType  name="PeSubclassEnumeration">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PE_SUBCLASS1_0" />
+      <xs:enumeration value="PE_SUBCLASS2_1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PeSubclassEnumeration" type="tns:PeSubclassEnumeration" />
+
+  <xs:complexType name="ListOfPeSubclassEnumeration">
+    <xs:sequence>
+      <xs:element name="PeSubclassEnumeration" type="tns:PeSubclassEnumeration" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListOfPeSubclassEnumeration" type="tns:ListOfPeSubclassEnumeration" nillable="true"></xs:element>
+
+  <xs:complexType name="AcPeDataType">
+    <xs:sequence>
+      <xs:element name="A" type="xs:float" minOccurs="0" />
+      <xs:element name="B" type="xs:float" minOccurs="0" />
+      <xs:element name="C" type="xs:float" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AcPeDataType" type="tns:AcPeDataType" />
+
+  <xs:complexType name="ListOfAcPeDataType">
+    <xs:sequence>
+      <xs:element name="AcPeDataType" type="tns:AcPeDataType" minOccurs="0" maxOccurs="unbounded" nillable="true" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListOfAcPeDataType" type="tns:ListOfAcPeDataType" nillable="true"></xs:element>
+
+  <xs:complexType name="AcPpDataType">
+    <xs:sequence>
+      <xs:element name="A_b" type="xs:float" minOccurs="0" />
+      <xs:element name="B_c" type="xs:float" minOccurs="0" />
+      <xs:element name="C_a" type="xs:float" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AcPpDataType" type="tns:AcPpDataType" />
+
+  <xs:complexType name="ListOfAcPpDataType">
+    <xs:sequence>
+      <xs:element name="AcPpDataType" type="tns:AcPpDataType" minOccurs="0" maxOccurs="unbounded" nillable="true" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListOfAcPpDataType" type="tns:ListOfAcPpDataType" nillable="true"></xs:element>
+
+  <xs:complexType name="EnergyStateInformationDataType">
+    <xs:sequence>
+      <xs:element name="IDSource" type="xs:unsignedByte" minOccurs="0" />
+      <xs:element name="IDDestination" type="xs:unsignedByte" minOccurs="0" />
+      <xs:element name="RegularTimeToOperate" type="xs:double" minOccurs="0" />
+      <xs:element name="ModePowerConsumption" type="xs:float" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EnergyStateInformationDataType" type="tns:EnergyStateInformationDataType" />
+
+  <xs:complexType name="ListOfEnergyStateInformationDataType">
+    <xs:sequence>
+      <xs:element name="EnergyStateInformationDataType" type="tns:EnergyStateInformationDataType" minOccurs="0" maxOccurs="unbounded" nillable="true" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListOfEnergyStateInformationDataType" type="tns:ListOfEnergyStateInformationDataType" nillable="true"></xs:element>
+
+  <xs:complexType name="PeVersionDataType">
+    <xs:sequence>
+      <xs:element name="MajorVersion" type="xs:unsignedByte" minOccurs="0" />
+      <xs:element name="MinorVersion" type="xs:unsignedByte" minOccurs="0" />
+      <xs:element name="Revision" type="xs:unsignedByte" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PeVersionDataType" type="tns:PeVersionDataType" />
+
+  <xs:complexType name="ListOfPeVersionDataType">
+    <xs:sequence>
+      <xs:element name="PeVersionDataType" type="tns:PeVersionDataType" minOccurs="0" maxOccurs="unbounded" nillable="true" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListOfPeVersionDataType" type="tns:ListOfPeVersionDataType" nillable="true"></xs:element>
+
+  <xs:complexType name="StandbyModeTransitionDataType">
+    <xs:sequence>
+      <xs:element name="IDDestination" type="xs:unsignedByte" minOccurs="0" />
+      <xs:element name="CurrentTimeToDestination" type="xs:double" minOccurs="0" />
+      <xs:element name="CurrentTimeToOperate" type="xs:double" minOccurs="0" />
+      <xs:element name="EnergyConsumptionToDestination" type="xs:float" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StandbyModeTransitionDataType" type="tns:StandbyModeTransitionDataType" />
+
+  <xs:complexType name="ListOfStandbyModeTransitionDataType">
+    <xs:sequence>
+      <xs:element name="StandbyModeTransitionDataType" type="tns:StandbyModeTransitionDataType" minOccurs="0" maxOccurs="unbounded" nillable="true" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListOfStandbyModeTransitionDataType" type="tns:ListOfStandbyModeTransitionDataType" nillable="true"></xs:element>
+
+</xs:schema>

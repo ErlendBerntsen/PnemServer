@@ -1,0 +1,15 @@
+<opc:TypeDictionary
+  xmlns:Opc.Ua.DI="http://opcfoundation.org/UA/DI/"
+  xmlns:Opc.Ua.PnEm="http://opcfoundation.org/UA/PNEM/"
+  xmlns:opc="http://opcfoundation.org/BinarySchema/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:ua="http://opcfoundation.org/UA/"
+  xmlns:tns="http://nortura.no/amspnemmodel/"
+  DefaultByteOrder="LittleEndian"
+  TargetNamespace="http://nortura.no/amspnemmodel/"
+>
+  <opc:Import Namespace="http://opcfoundation.org/UA/" Location="Opc.Ua.BinarySchema.bsd"/>
+  <opc:Import Namespace="http://opcfoundation.org/UA/DI/" Location="Opc.Ua.DI.BinarySchema.bsd"/>
+  <opc:Import Namespace="http://opcfoundation.org/UA/PNEM/" Location="Opc.Ua.PnEm.BinarySchema.bsd"/>
+
+</opc:TypeDictionary>

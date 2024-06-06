@@ -1,0 +1,20 @@
+<xs:schema
+  xmlns:Opc.Ua.DI="http://opcfoundation.org/UA/DI/"
+  xmlns:Opc.Ua.PnEm="http://opcfoundation.org/UA/PNEM/"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:ua="http://opcfoundation.org/UA/2008/02/Types.xsd"
+  xmlns:tns="http://nortura.no/amspnemmodel/"
+  targetNamespace="http://nortura.no/amspnemmodel/"
+  elementFormDefault="qualified"
+>
+  <xs:annotation>
+    <xs:appinfo>
+      <ua:Model ModelUri="http://nortura.no/amspnemmodel/" Version="1.0.0" PublicationDate="2024-06-06T06:23:21Z" />
+    </xs:appinfo>
+  </xs:annotation>
+  
+  <xs:import namespace="http://opcfoundation.org/UA/" />
+  <xs:import namespace="http://opcfoundation.org/UA/DI/" />
+  <xs:import namespace="http://opcfoundation.org/UA/PNEM/" />
+
+</xs:schema>
